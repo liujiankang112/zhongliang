@@ -17,9 +17,7 @@ class HomePresenter: BasePresenter<HomeConstact.View>(),
                 override fun onNext(t: IndexBean?) {
                     mView!!.getIndexReturn(t!!)
                 }
-
             }))
-
     }
 
 }
