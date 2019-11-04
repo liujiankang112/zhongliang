@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/mainNestedSV"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/maintoolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/tianqi2x" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/logo2x" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/xiaoxi" />
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/banner12x" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/mainbt_menjinYS"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mainfragment_button_shape"
+
+                    android:drawableTop="@mipmap/menjinyaoshi2x"
+                    android:text="门禁钥匙" />
+
+                <Button
+                    android:id="@+id/mainbt_lianxiWY"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mainfragment_button_shape"
+                    android:drawableTop="@mipmap/lianxiwuye2x"
+                    android:text="联系物业" />
+
+                <Button
+                    android:id="@+id/mainbt_wuyeJF"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mainfragment_button_shape"
+                    android:drawableTop="@mipmap/jiaofei2x"
+                    android:text="物业缴费" />
+
+                <Button
+                    android:id="@+id/mainbt_baoxiuFW"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mainfragment_button_shape"
+                    android:drawableTop="@mipmap/baoxiu2x"
+                    android:text="保修服务" />
+
+                <Button
+                    android:id="@+id/mainbt_xinzengFK"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mainfragment_button_shape"
+                    android:drawableTop="@mipmap/xinzengfangke2x"
+                    android:text="新增访客" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/mainfragment_button_shape2"
+                        android:drawableRight="@mipmap/zhinengjiaju2x"
+                        android:text="   智能家居       " />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/mainfragment_button_shape2"
+                        android:drawableRight="@mipmap/keshiduijiang2x"
+                        android:text="   可视对讲       " />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/mainfragment_button_shape2"
+                        android:drawableRight="@mipmap/cheweiguanli2x"
+                        android:text="   车位管理       " />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/mainfragment_button_shape2"
+                        android:drawableRight="@mipmap/wifi2x"
+                        android:text="   WIFI       " />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/mainfragment_button_shape2"
+                        android:drawableRight="@mipmap/jiankong2x"
+                        android:text="   监控       " />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/mainfragment_button_shape"
+                android:drawableLeft="@mipmap/tongzhi3x"
+                android:text="停车缴费功能正式上线，尽情体验！！"
+                android:textColor="#C6C6C6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="最新活动"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/banner23x" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/banner33x" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
