@@ -3,43 +3,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <include layout="@layout/layout_title"/>
+
+    <include layout="@layout/layout_title" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginLeft="40dp"
+        android:layout_marginTop="106dp"
         android:layout_marginRight="40dp"
-        android:layout_marginTop="106dp">
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:text="@string/txt_input_verify"/>
+            android:text="@string/txt_input_verify"
+            android:textSize="30dp" />
+
         <TextView
             android:id="@+id/txt_tips_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
+            android:text="@string/tips_phone_sendverify"
             android:textColor="@color/colorGray"
-            android:text="@string/tips_phone_sendverify"/>
+            android:textSize="14sp" />
 
         <com.goketech.smartcommunity.commonents.VerifyCode
             android:id="@+id/verify_code"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></com.goketech.smartcommunity.commonents.VerifyCode>
+            android:layout_height="wrap_content">
+
+        </com.goketech.smartcommunity.commonents.VerifyCode>
+
         <TextView
             android:id="@+id/txt_resetVerify"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/color_getverify"
             android:layout_marginTop="10dp"
-            android:text="@string/txt_getverifiy"/>
+            android:text="@string/txt_getverifiy"
+            android:textColor="@color/color_getverify" />
     </LinearLayout>
-    <TextView android:id="@+id/txt_verifyLogin" android:layout_width="match_parent" android:layout_height="50dp"
-        android:layout_marginTop="90dp" android:background="@drawable/txt_login_btn_bg"
-        android:gravity="center" android:text="登录" android:textColor="@color/white"
+
+    <TextView
+        android:id="@+id/txt_verifyLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="90dp"
         android:layout_marginRight="20dp"
+        android:background="@drawable/txt_login_btn_bg"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@color/white"
         android:textSize="18sp" />
 </LinearLayout>

@@ -61,7 +61,7 @@ dependencies {
     implementation 'org.jsoup:jsoup:1.10.2'
     implementation 'me.yatoooon:screenadaptation:1.1.1'
 
-//    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
 
     implementation 'com.google.zxing:core:3.3.0'
 
@@ -71,5 +71,5 @@ dependencies {
 
     implementation 'com.bigkoo:convenientbanner:2.0.5'
 
-
+    implementation 'com.sunfusheng:marqueeview:1.3.3'
 }

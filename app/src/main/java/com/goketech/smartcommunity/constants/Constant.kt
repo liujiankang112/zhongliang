@@ -21,6 +21,8 @@ object Constant {
 
     var TOKEN = "token"  //用户token
 
+    var WXCODE = ""
+    var WXSTATE = 0
 
     var RESULT_CODE_SUCCESS = 0
     var RESULT_CODE_NOSETPW = 0
