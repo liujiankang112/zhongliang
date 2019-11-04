@@ -12,6 +12,6 @@ interface HomeConstact {
 
     interface Presenter:
         IPresenter<View> {
-        fun getIndex();
+        fun getHome(param: Map<String, String>);
     }
 }

@@ -9,8 +9,9 @@ import com.goketech.smartcommunity.model.bean.IndexBean
 
 class MyPresenter: BasePresenter<HomeConstact.View>(),
     HomeConstact.Presenter {
-    override fun getIndex() {
-
+    override fun getHome(param: Map<String, String>) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
+
 
 }

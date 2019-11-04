@@ -9,15 +9,17 @@ import com.goketech.smartcommunity.model.bean.IndexBean
 
 class HomePresenter: BasePresenter<HomeConstact.View>(),
     HomeConstact.Presenter {
-    override fun getIndex() {
+    override fun getHome(param: Map<String, String>) {
         addSubscribe(
-            HttpManager.getMyApi().getIndexData()
-            .compose(RxUtils.rxScheduler<IndexBean>())
-            .subscribeWith(object: CommonSubscriber<IndexBean>(mView!!){
-                override fun onNext(t: IndexBean?) {
-                    mView!!.getIndexReturn(t!!)
-                }
-            }))
-    }
+            HttpManager.getMyApi().getHome(param)
+                .compose(RxUtils.rxScheduler<IndexBean>())
+                .subscribeWith(object : CommonSubscriber<IndexBean>(mView!!) {
+                    override fun onNext(t: IndexBean?) {
+                        mView!!.getIndexReturn(t!!)
+                    }
 
+                })
+        )
+
+    }
 }

@@ -1,101 +1,82 @@
 package com.goketech.smartcommunity.model.bean
 
+class IndexBean {
 
-data class IndexBean(
-    val errmsg: String,
-    val errno: Int,
-    val `data`: Data
-){
-    data class Data(
-        val banner: List<Banner>,
-        val brandList: List<Brand>,
-        val categoryList: List<Category>,
-        val channel: List<Channel>,
-        val hotGoodsList: List<HotGoods>,
-        val newGoodsList: List<NewGoods>,
-        val topicList: List<Topic>
-    )
+    /**
+     * data : {"activity":[{"apply_time":"2019-09-13 00:00:00","begin_time":"2019-09-03 00:00:00","end_time":"2019-10-06 00:00:00","id":2,"image":"http://smart-community-goke.oss-cn-beijing.aliyuncs.com/201909031242397699.png","remark":"请大家踊跃参加，晒出您的拿手菜！","title":"享受新时代"},{"apply_time":"2019-09-12 00:00:00","begin_time":"2019-09-03 00:00:00","end_time":"2019-09-12 00:00:00","id":1,"image":"http://smart-community-goke.oss-cn-beijing.aliyuncs.com/201909031241364768.png","remark":"请大家踊跃参加，体验智能生活！","title":"智能家居体验馆一日游"}],"banner":[{"image":"http://smart-community-goke.oss-cn-beijing.aliyuncs.com/201909021114121007.png","type":"1","url":"http://www.baidu.com"},{"image":"http://smart-community-goke.oss-cn-beijing.aliyuncs.com/201909021114544608.gif","type":"1","url":"http://www.baidu.com"}],"notice_list":[{"content":"水电费111","id":2,"image":"http://smart-community-goke.oss-cn-beijing.aliyuncs.com/201910231814484807.jpg","scope":"1","show_time":"2019-10-23 00:00:00","title":"星期五停水通知","type":"3"}],"property_phone":"18612964055","weather":"27.9"}
+     * msg : success
+     * status : 0
+     */
 
-    data class Topic(
-        val avatar: String,
-        val content: String,
-        val id: Int,
-        val is_show: Int,
-        val item_pic_url: String,
-        val price_info: String,
-        val read_count: String,
-        val scene_pic_url: String,
-        val sort_order: Int,
-        val subtitle: String,
-        val title: String,
-        val topic_category_id: Int,
-        val topic_tag_id: Int,
-        val topic_template_id: Int
-    )
+    var data: DataBean? = null
+    var msg: String? = null
+    var status: Int = 0
 
-    data class Banner(
-        val ad_position_id: Int,
-        val content: String,
-        val enabled: Int,
-        val end_time: Int,
-        val id: Int,
-        val image_url: String,
-        val link: String,
-        val media_type: Int,
-        val name: String
-    )
+    class DataBean {
+        /**
+         * activity : [{"apply_time":"2019-09-13 00:00:00","begin_time":"2019-09-03 00:00:00","end_time":"2019-10-06 00:00:00","id":2,"image":"http://smart-community-goke.oss-cn-beijing.aliyuncs.com/201909031242397699.png","remark":"请大家踊跃参加，晒出您的拿手菜！","title":"享受新时代"},{"apply_time":"2019-09-12 00:00:00","begin_time":"2019-09-03 00:00:00","end_time":"2019-09-12 00:00:00","id":1,"image":"http://smart-community-goke.oss-cn-beijing.aliyuncs.com/201909031241364768.png","remark":"请大家踊跃参加，体验智能生活！","title":"智能家居体验馆一日游"}]
+         * banner : [{"image":"http://smart-community-goke.oss-cn-beijing.aliyuncs.com/201909021114121007.png","type":"1","url":"http://www.baidu.com"},{"image":"http://smart-community-goke.oss-cn-beijing.aliyuncs.com/201909021114544608.gif","type":"1","url":"http://www.baidu.com"}]
+         * notice_list : [{"content":"水电费111","id":2,"image":"http://smart-community-goke.oss-cn-beijing.aliyuncs.com/201910231814484807.jpg","scope":"1","show_time":"2019-10-23 00:00:00","title":"星期五停水通知","type":"3"}]
+         * property_phone : 18612964055
+         * weather : 27.9
+         */
 
-    data class Channel(
-        val categoryid: Int,
-        val icon_url: String,
-        val id: Int,
-        val name: String,
-        val sort_order: Int,
-        val url: String
-    )
+        var property_phone: String? = null
+        var weather: String? = null
+        var activity: List<ActivityBean>? = null
+        var banner: List<BannerBean>? = null
+        var notice_list: List<NoticeListBean>? = null
 
-    data class HotGoods(
-        val goods_brief: String,
-        val id: Int,
-        val list_pic_url: String,
-        val name: String,
-        val retail_price: String
-    )
+        class ActivityBean {
+            /**
+             * apply_time : 2019-09-13 00:00:00
+             * begin_time : 2019-09-03 00:00:00
+             * end_time : 2019-10-06 00:00:00
+             * id : 2
+             * image : http://smart-community-goke.oss-cn-beijing.aliyuncs.com/201909031242397699.png
+             * remark : 请大家踊跃参加，晒出您的拿手菜！
+             * title : 享受新时代
+             */
 
-    data class Brand(
-        val app_list_pic_url: String,
-        val floor_price: String,
-        val id: Int,
-        val is_new: Int,
-        val is_show: Int,
-        val list_pic_url: String,
-        val name: String,
-        val new_pic_url: String,
-        val new_sort_order: Int,
-        val pic_url: String,
-        val simple_desc: String,
-        val sort_order: Int
-    )
+            var apply_time: String? = null
+            var begin_time: String? = null
+            var end_time: String? = null
+            var id: Int = 0
+            var image: String? = null
+            var remark: String? = null
+            var title: String? = null
+        }
 
-    data class NewGoods(
-        val id: Int,
-        val list_pic_url: String,
-        val name: String,
-        val retail_price: String
-    )
+        class BannerBean {
+            /**
+             * image : http://smart-community-goke.oss-cn-beijing.aliyuncs.com/201909021114121007.png
+             * type : 1
+             * url : http://www.baidu.com
+             */
 
-    data class Category(
-        val goodsList: List<Goods>,
-        val id: Int,
-        val name: String
-    )
+            var image: String? = null
+            var type: String? = null
+            var url: String? = null
+        }
 
-    data class Goods(
-        val id: Int,
-        val list_pic_url: String,
-        val name: String,
-        val retail_price: String
-    )
+        class NoticeListBean {
+            /**
+             * content : 水电费111
+             * id : 2
+             * image : http://smart-community-goke.oss-cn-beijing.aliyuncs.com/201910231814484807.jpg
+             * scope : 1
+             * show_time : 2019-10-23 00:00:00
+             * title : 星期五停水通知
+             * type : 3
+             */
+
+            var content: String? = null
+            var id: Int = 0
+            var image: String? = null
+            var scope: String? = null
+            var show_time: String? = null
+            var title: String? = null
+            var type: String? = null
+        }
+    }
 }
-
-

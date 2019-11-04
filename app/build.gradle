@@ -65,7 +65,7 @@ dependencies {
 
     implementation 'com.google.zxing:core:3.3.0'
 
-    implementation 'com.google.zxing:core:3.2.1'
+    implementation 'com.google.zxing:core:3.3.0'
     implementation 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
     implementation 'cn.bingoogolapple:bga-zxing:1.1.7@aar'
 
