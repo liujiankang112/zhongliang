@@ -103,6 +103,8 @@ class MainFragment : BaseFragment<HomeConstact.View, HomeConstact.Presenter>(),H
         presenter!!.getHome(prams)
 
 
+
+
     }
 
 
